@@ -1,0 +1,22 @@
+## Which product category has the highest total stock quantity across all products?
+Stock_Quantity_And_Category = 
+VAR MaxStock = MAX('Inventory Management'[Stock_Quantity])
+VAR CategoryName = CALCULATE(
+    FIRSTNONBLANK('Inventory Management'[Category], 1),
+    'Inventory Management'[Stock_Quantity] = MaxStock
+)
+RETURN
+    "The highest total stock quantity: " & MaxStock & " | Category:  " & CategoryName
+
+
+## How many products currently have stock quantities below their reorder point?
+  Measure_Below_Reorder_Point = 
+CALCULATE(
+    COUNT('Inventory Management'[Diff between stock and reorder point]),
+    'Inventory Management'[Stock_Quantity] < 'Inventory Management'[Reorder_Point]
+)
+
+  
+## What minimum order quantity is required for a company to restock all products below the reorder point?
+  Total_Order_Quantity = 
+SUM('Inventory Management'[Diff between stock and reorder point])
