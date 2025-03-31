@@ -2,8 +2,8 @@
 FP20 Analytics ZoomCharts Challenge
 
 # Project
-
-The primary goal of this project was
+This challenge explores key aspects such as stock levels, supplier performance, warehouse utilisation, and reorder strategies. By analysing this dataset, you will identify trends, optimise restocking, and assess cost efficiency. 
+The primary goal of this project was uncovering actionable insights that enhance inventory operations and decision-making
 
 
 
@@ -60,9 +60,19 @@ Warehouse & Geographic Insights
 
 
 # Main stages 
-
+1. Identified the data source to be used and imported the dataset in Power BI
+2. Researched of the dataset for duplicates and for missing values - cleaned and then transformed data into a usable variant 
+3. Build data models in Power BI using tables, relationships, calculated columns, and measures
+4. Found the answer on the questions of projects
+5. Report Design 
 
 
 # Function and techniques
+1. Power Query
+
+
+# Work with data
+1. Created new dimension table with uniq named of category using power query and created new releationships between twp tables
+2. 
 
 
