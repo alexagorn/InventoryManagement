@@ -3,7 +3,7 @@ FP20 Analytics ZoomCharts Challenge
 
 # Project
 
-The primary goal of this project was
+This challenge explores key aspects such as stock levels, supplier performance, warehouse utilisation, and reorder strategies. By analysing this dataset, you will identify trends, optimise restocking, and assess cost efficiency. The primary goal of this project was uncovering actionable insights that enhance inventory operations and decision-making
 
 
 
@@ -60,8 +60,11 @@ Warehouse & Geographic Insights
 
 
 # Main stages 
-
-Design 
+1.Identified the data source to be used and imported the dataset in Power BI
+2.Researched of the dataset for duplicates and for missing values - cleaned and then transformed data into a usable variant
+3.Build data models in Power BI using tables, relationships, calculated columns, and measures
+4.Found the answer on the questions of projects (you can find the DAX solution in file queries.dax)
+5.Report Design
 
 First of all, I chose type 16:9 in canvas settings according to requirements of the challenge. To present my main measures and calculation I added a vizualization that called card(new) and then added 5 my value. I colored this in black and did the same size of labels and text.
 According to the main question of research to understand weather there are any seasonal trends when the highest number of products were restocked I decided to display this using vizualization called drill down combo pro (filter) because this kind of viz is the best for categorical data.
