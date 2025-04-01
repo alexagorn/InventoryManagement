@@ -6,7 +6,8 @@ VAR CategoryName = CALCULATE(
     'Inventory Management'[Stock_Quantity] = MaxStock
 )
 RETURN
-    "The highest total stock quantity: " & MaxStock & " | Category:  " & CategoryName
+    ##"The highest total stock quantity: " & MaxStock & " | Category:  " & CategoryName
+        "The highest total stock quantity: " & CategoryName
 
 
 ## How many products currently have stock quantities below their reorder point?
@@ -20,3 +21,37 @@ CALCULATE(
 ## What minimum order quantity is required for a company to restock all products below the reorder point?
   Total_Order_Quantity = 
 SUM('Inventory Management'[Diff between stock and reorder point])
+
+
+## Which supplier has the highest average lead time for restocking?
+Avg_lead_time_suppliers = 
+VAR MaxLeadTime = MAX('Suppliers lead time'[Avg_lead_time_days])
+VAR SupplierID = CALCULATE(
+    FIRSTNONBLANK('Suppliers lead time'[Supplier_ID], 1),
+    'Suppliers lead time'[Avg_lead_time_days] = MaxLeadTime
+)
+RETURN
+ "The highest average lead time for restocking: " & SupplierID
+
+
+## What is the average time since the last restock for products marked as "Out of Stock"?
+The average time since the last restock for products marked as "Out of Stock" = ABS(AVERAGE('Inventory Management'[Time since the last restock marked as "Out of stock"]))
+
+
+## Identify the months when the highest number of products were restocked - are there any seasonal trends?
+To identify this I extracted number of month from "Last_Restoke_Date" column and created new column.
+
+
+## Identify the top 5 most expensive products (by unit price) and their categories.
+I didn't use here any measures
+
+
+## Which product category has the fastest turnover based on stock quantity and lead time?
+I created new separated table where I grouped the stock quantity and lead time in days according to category and then to calculate turnover i divided the total quantity by category and total lead time by category
+
+
+## Which warehouse location has the highest number of products stored?
+To find the answer on this question I used measures on viz like SUM()
+
+## Which country has the most stocked items, and which top 3 counties have the highest stocked quantities by different product categories?
+I didn't use here any measures
