@@ -61,7 +61,9 @@ Warehouse & Geographic Insights
 
 # Main stages 
 
-
+Design 
+First of all, I chose type 16:9 in canvas settings according to requirements of the challenge. To present my main measures and calculation I added a vizualization that called card(new) and then added 5 my value. I colored this in black and did the same size of labels and text.
+According to the main question of research to display 
 
 # Function and techniques
 
