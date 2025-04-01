@@ -39,7 +39,7 @@ The average time since the last restock for products marked as "Out of Stock" = 
 
 
 ## Identify the months when the highest number of products were restocked - are there any seasonal trends?
-To identify this I extracted number of month from "Last_Restoke_Date" column and created new column.
+To identify this I extracted number of month from "Last_Restoke_Date" column and created new column. i also used here measure in viz like SUM() to calculate the sum of reorder point according to month
 
 
 ## Identify the top 5 most expensive products (by unit price) and their categories.
