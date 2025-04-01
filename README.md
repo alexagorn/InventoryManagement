@@ -69,6 +69,12 @@ According to the main question of research to understand weather there are any s
 To identify the five most expensive product I voted in also drill down combo pro (filter) vizualization and did advanced filter by max of unit price to see five most expencive product
 
 in order to understand which warehouse location has the highest number of products stored i made use column warehouse location and calculate the sum of stock quantity 
+
+to display which country has the most stocked items, and which top 3 counties have the highest stocked quantities by different product categories i used drill down map pro (filter)
+
 # Function and techniques
+1. DAX - SUM, AVERAGE, ABS, VAR, COUNT, FIRSTNONBLANK, RETURN
+2. POWER QUERY
+3. ZOOM CHART Guide about vizual 
 
 
