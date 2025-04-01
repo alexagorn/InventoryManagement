@@ -77,7 +77,7 @@ to display which country has the most stocked items, and which top 3 counties ha
 
 # Function and techniques
 1. DAX - SUM, AVERAGE, ABS, VAR, COUNT, FIRSTNONBLANK, RETURN
-2. POWER QUERY
-3. ZOOM CHART Guide about vizual 
+2. POWER QUERY - GroupBY, Customer Column, Rounding, Column quality
+3. ZOOM CHART Guide 
 
 
