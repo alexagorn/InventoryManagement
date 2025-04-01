@@ -62,9 +62,13 @@ Warehouse & Geographic Insights
 # Main stages 
 
 Design 
-First of all, I chose type 16:9 in canvas settings according to requirements of the challenge. To present my main measures and calculation I added a vizualization that called card(new) and then added 5 my value. I colored this in black and did the same size of labels and text.
-According to the main question of research to display 
 
+First of all, I chose type 16:9 in canvas settings according to requirements of the challenge. To present my main measures and calculation I added a vizualization that called card(new) and then added 5 my value. I colored this in black and did the same size of labels and text.
+According to the main question of research to understand weather there are any seasonal trends when the highest number of products were restocked I decided to display this using vizualization called drill down combo pro (filter) because this kind of viz is the best for categorical data.
+
+To identify the five most expensive product I voted in also drill down combo pro (filter) vizualization and did advanced filter by max of unit price to see five most expencive product
+
+in order to understand which warehouse location has the highest number of products stored i made use column warehouse location and calculate the sum of stock quantity 
 # Function and techniques
 
 
