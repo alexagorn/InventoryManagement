@@ -50,7 +50,7 @@ Cost & Pricing Analysis
 
 7. Identify the top 5 most expensive products (by unit price) and their categories.
 8. Which product category has the fastest turnover based on stock quantity and lead time?
-
+   To calculate it i used group by in power query and count avg lead_time_days and stock quantity for each category and then used the custom formula to calculate trunover - [Stock_Quantity]/[AVG_Lead_Time_Days]
 
 
 Warehouse & Geographic Insights
@@ -78,6 +78,32 @@ to display which country has the most stocked items, and which top 3 counties ha
 # Function and techniques
 1. DAX - SUM, AVERAGE, ABS, VAR, COUNT, FIRSTNONBLANK, RETURN
 2. POWER QUERY - GroupBY, Customer Column, Rounding, Column quality
-3. ZOOM CHART Guide 
+3. ZOOM CHART Guide
+   
+
+# Conclusion 
+1.The highest total stock quantity has "Home and Garden" category. In general stock quantity for all existing category is almost equal and indicate that company are keeping a balanced inventory without focusing too much on any one product category, which could mitigate risk. But it depends on demand on category because if the demand on certain category is not predictable and not stable then large level stock is unneeded and maybe company can bumb into over-investing and over0stocking. To understand this analyst need to analyse the quantity and data of product from all category and identify high-demand category and seasonal-category to optimize the level of stock
+2. 262 products currently have stock quantities below their reorder point. In according to total stock quantity it is low quantity. But to avoid this company can research some patterns and reason why for all category at least 30 items is out of stock.
+3. Minimum order quantity - 8163.The 8163 units the company need to restock account for only about 0.27% of your total inventory. This suggests that the scale of restocking is relatively small compared to your overall stock, which is a good sign that your inventory levels are well-managed in general. But again it depends on the demand of the kinds of products to prioritize restocking based on it and the level of critisism and priority.
+4. The highest average lead time for restocking has supplier SUP041.
+5. 179 days - average time since the last restock for products marked as "Out of Stock". The longer a product is out of stock, the more likely it is that customers will move to competitors. A period of 179 days could mean that company losing out on a significant amount of sales if these products are popular or essential. 
+6. The highest number of products were restocked in July and October if we consider annual data, so we can suppose that it happens often in the middle of the year or in the end of the year.
+8. The fastest turnover based on stock quantity and lead time has "Home and Garden" category. But in result of calculation we can see that all product category of company have demand but according to our stock quantity we can suggests that inventory is moving slowly.
+
+
+
+What could be done? 
+
+Optimize Supply Chain: If the result of 179 days is problematic You may want to look at sourcing, order lead times, and shipping times to shorten the restock period or consider implementing safety stock policies, which ensure that there is always a buffer stock to prevent products from going out of stock for extended periods or Inventory Forecasting: Use forecasting techniques to predict demand more accurately, so you're prepared for restocking in advance.
+
+Improvement:
+If you're looking to improve the turnover, consider:
+
+Optimizing stock levels: You could reduce the number of units on hand to match your sales velocity more closely.
+
+Faster sales strategies: Find ways to speed up the sales process, such as promotions, advertising, or even adjusting pricing to increase demand.
+
+Reduce slow-moving products: Identify which products have low sales velocity and consider moving them out of your inventory.
+
 
 
