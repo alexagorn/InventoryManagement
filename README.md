@@ -61,9 +61,13 @@ Warehouse & Geographic Insights
 
 # Main stages 
 1.Identified the data source to be used and imported the dataset in Power BI
+
 2.Researched of the dataset for duplicates and for missing values - cleaned and then transformed data into a usable variant
+
 3.Build data models in Power BI using tables, relationships, calculated columns, and measures
+
 4.Found the answer on the questions of projects (you can find the DAX solution in file queries.dax)
+
 5.Report Design
 
 First of all, I chose type 16:9 in canvas settings according to requirements of the challenge. To present my main measures and calculation I added a vizualization that called card(new) and then added 5 my value. I colored this in black and did the same size of labels and text.
