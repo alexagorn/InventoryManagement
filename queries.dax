@@ -1,9 +1,9 @@
 ## Which product category has the highest total stock quantity across all products?
 Stock_Quantity_And_Category = 
-VAR MaxStock = MAX('Inventory Management'[Stock_Quantity])
+VAR MaxStock = MAX('Inventory Management'[Stock_Quantity]) # визначаємо змінну MaxStock, яка містить максимальну кількість товарів (Stock_Quantity) у таблиці 'Inventory Management'
 VAR CategoryName = CALCULATE(
-    FIRSTNONBLANK('Inventory Management'[Category], 1),
-    'Inventory Management'[Stock_Quantity] = MaxStock
+    FIRSTNONBLANK('Inventory Management'[Category], 1), # функція, яка повертає перше непусте значення стовпця Category з таблиці 'Inventory Management'. Вона потрібна для того, щоб отримати категорію, яка має максимальний товар (за умови, що ці значення не порожні).
+    'Inventory Management'[Stock_Quantity] = MaxStock # фільтр, який гарантує, що ми обираємо тільки той продукт (або продукти), де кількість товару (Stock_Quantity) дорівнює максимальному значенню MaxStock, яке ми знайшли на першому кроці.
 )
 RETURN
     ##"The highest total stock quantity: " & MaxStock & " | Category:  " & CategoryName
@@ -14,24 +14,31 @@ RETURN
   Measure_Below_Reorder_Point = 
 CALCULATE(
     COUNT('Inventory Management'[Diff between stock and reorder point]),
-    'Inventory Management'[Stock_Quantity] < 'Inventory Management'[Reorder_Point]
+    'Inventory Management'[Stock_Quantity] < 'Inventory Management'[Reorder_Point] #повертаємо рядок, який складається з повідомлення "The highest total stock quantity: " та назви категорії (CategoryName), яку ви отримали на попередньому кроці.
 )
 
   
 ## What minimum order quantity is required for a company to restock all products below the reorder point?
   Total_Order_Quantity = 
-SUM('Inventory Management'[Diff between stock and reorder point])
+SUM('Inventory Management'[Diff between stock and reorder point]) # сума різниці між фактичним запасом і точкою перерохподілу
 
 
 ## Which supplier has the highest average lead time for restocking?
 Avg_lead_time_suppliers = 
 VAR MaxLeadTime = MAX('Suppliers lead time'[Avg_lead_time_days])
+    -- Тут ми визначаємо змінну MaxLeadTime, яка знаходить максимальне значення серед середнього часу поставки (Avg_lead_time_days) в таблиці 'Suppliers lead time'.
+    -- Це буде максимальний час поставки серед усіх постачальників.
 VAR SupplierID = CALCULATE(
     FIRSTNONBLANK('Suppliers lead time'[Supplier_ID], 1),
     'Suppliers lead time'[Avg_lead_time_days] = MaxLeadTime
 )
+    -- Далі ми створюємо змінну SupplierID, яка за допомогою функції CALCULATE визначає і повертає ID постачальника, у якого середній час поставки дорівнює максимальному (MaxLeadTime).
+    -- FIRSTNONBLANK повертає перше непусте значення ID постачальника для цього максимального часу поставки. Ми використовуємо фільтр, щоб взяти тільки ті рядки, де час поставки дорівнює MaxLeadTime.
 RETURN
- "The highest average lead time for restocking: " & SupplierID
+    "The highest average lead time for restocking: " & SupplierID
+    -- Повертаємо текстове повідомлення, яке вказує на постачальника з найбільшим середнім часом поставки для поповнення запасів.
+    -- Виводиться ID постачальника, який має найвищий середній час поставки.
+
 
 
 ## What is the average time since the last restock for products marked as "Out of Stock"?
