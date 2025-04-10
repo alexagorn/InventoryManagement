@@ -70,14 +70,15 @@ Warehouse & Geographic Insights
 
 5.Report Design
 
-First of all, I chose type 16:9 in canvas settings according to requirements of the challenge. To present my main measures and calculation I added a vizualization that called card(new) and then added 5 my value. I colored this in black and did the same size of labels and text.
-According to the main question of research to understand weather there are any seasonal trends when the highest number of products were restocked I decided to display this using vizualization called drill down combo pro (filter) because this kind of viz is the best for categorical data.
+First of all, I selected the 16:9 aspect ratio in the canvas settings according to the requirements of the challenge. To present my main measurements and calculations, I added a visualization called "Card (New)" and then included my five values. I colored this black and ensured that the labels and text were the same size.
 
-To identify the five most expensive product I voted in also drill down combo pro (filter) vizualization and did advanced filter by max of unit price to see five most expencive product
+To address the main research question—whether there are any seasonal trends in the restocking of products—I decided to display this using a visualization called "Drill Down Combo Pro (Filter)" because this type of visualization is best suited for categorical data.
 
-in order to understand which warehouse location has the highest number of products stored i made use column warehouse location and calculate the sum of stock quantity 
+To identify the five most expensive products, I also used the "Drill Down Combo Pro (Filter)" visualization and applied an advanced filter to show the top five products with the highest unit prices.
 
-to display which country has the most stocked items, and which top 3 counties have the highest stocked quantities by different product categories i used drill down map pro (filter)
+In order to understand which warehouse location has the highest number of products stored, I used the "Warehouse Location" column and calculated the sum of the stock quantities.
+
+To display which country has the most stocked items, and to identify the top three countries with the highest stocked quantities across different product categories, I used the "Drill Down Map Pro (Filter)" visualization.
 
 # Function and techniques
 1. DAX - SUM, AVERAGE, ABS, VAR, COUNT, FIRSTNONBLANK, RETURN
@@ -86,26 +87,28 @@ to display which country has the most stocked items, and which top 3 counties ha
    
 
 # Conclusion 
-1. The highest total stock quantity has "Home and Garden" category. In general stock quantity for all existing category is almost equal and indicate that company are keeping a balanced inventory without focusing too much on any one product category, which could mitigate risk. But it depends on demand on category because if the demand on certain category is not predictable and not stable then large level stock is unneeded and maybe company can bumb into over-investing and over0stocking. To understand this analyst need to analyse the quantity and data of product from all category and identify high-demand category and seasonal-category to optimize the level of stock
+1. The highest total stock quantity is in the "Home and Garden" category. Overall, the stock quantity for all existing categories is almost equal, which indicates that the company is maintaining a balanced inventory without focusing too much on any one product category. This approach could mitigate risk. However, it depends on the demand for each category. If the demand for a certain category is unpredictable and unstable, having a large stock level may be unnecessary. The company might end up over-investing and overstocking. To address this, the analyst should examine the product quantities and data across all categories, identify high-demand and seasonal categories, and optimize stock levels accordingly.
 
-2. 262 products currently have stock quantities below their reorder point. In according to total stock quantity it is low quantity. But to avoid this company can research some patterns and reason why for all category at least 30 items is out of stock.
+2. Currently, 262 products have stock quantities below their reorder point. Although this number seems low in relation to total stock quantity, the company should investigate patterns and reasons why at least 30 items are out of stock in every category.
 
-3. Minimum order quantity - 8163.The 8163 units the company need to restock account for only about 0.27% of your total inventory. This suggests that the scale of restocking is relatively small compared to your overall stock, which is a good sign that your inventory levels are well-managed in general. But again it depends on the demand of the kinds of products to prioritize restocking based on it and the level of critisism and priority.
+3. The minimum order quantity is 8,163 units. These 8,163 units that the company needs to restock account for only about 0.27% of total inventory. This suggests that the scale of restocking is relatively small compared to the overall stock, which is a positive sign that inventory levels are well-managed. However, restocking priorities should still be based on product demand and the urgency of each product.
 
-4. The highest average lead time for restocking has supplier SUP041.
+4. The highest average lead time for restocking is with supplier SUP041.
 
-5. 179 days - average time since the last restock for products marked as "Out of Stock". The longer a product is out of stock, the more likely it is that customers will move to competitors. A period of 179 days could mean that company losing out on a significant amount of sales if these products are popular or essential. 
+5. The average time since the last restock for products marked as "Out of Stock" is 179 days. The longer a product is out of stock, the more likely customers will turn to competitors. A 179-day period could mean the company is losing a significant amount of sales if these products are popular or essential.
 
-6. The highest number of products were restocked in July and October if we consider annual data, so we can suppose that it happens often in the middle of the year or in the end of the year.
+6. The highest number of products were restocked in July and October, based on annual data. This suggests that restocking often happens in the middle and at the end of the year.
 
-8. The fastest turnover based on stock quantity and lead time has "Home and Garden" category. But in result of calculation we can see that all product category of company have demand but according to our stock quantity we can suggests that inventory is moving slowly.
+8. The fastest turnover based on stock quantity and lead time is in the "Home and Garden" category. However, the calculation results show that all product categories have demand. Based on current stock quantities, we can suggest that inventory is moving slowly overall.
+
+
 
 
 
 # What could be done? 
-If the result of analysis average lead time since the last restock for products marked as out of stock 179 days then it can be problematic. For company need to look at sourcing, order lead times, and shipping times to shorten the restock period or consider implementing safety stock policies, which ensure that there is always a buffer stock to prevent products from going out of stock for extended periods. In another words there is needs to optimize supply chain or Inventory Forecasting. Company can use forecasting techniques to predict demand more accurately, so that company will be prepared for restocking in advance.
+If the average lead time since the last restock for products marked as out of stock is 179 days, this could be problematic. The company needs to evaluate its sourcing, order lead times, and shipping times to shorten the restock period. Additionally, implementing safety stock policies could help ensure there is always a buffer to prevent products from being out of stock for extended periods. In other words, the supply chain and inventory forecasting processes need to be optimized. The company could use forecasting techniques to predict demand more accurately, allowing for more proactive restocking.
 
-To improve the turnover, company could reduce the number of units on hand to match your sales velocity more closely and optimize stock level, find ways to speed up the sales process, such as promotions, advertising, or even adjusting pricing to increase demand, identify which products have low sales velocity and consider moving them out of your inventory and reduce slow-moving products.
+To improve turnover, the company could reduce the number of units on hand to better match sales velocity and optimize stock levels. The company should also explore ways to speed up the sales process, such as through promotions, advertising, or adjusting pricing to increase demand. Additionally, it would be helpful to identify products with low sales velocity and consider removing them from inventory to reduce slow-moving stock.
 
 
 
