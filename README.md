@@ -50,7 +50,7 @@ Cost & Pricing Analysis
 
 7. Identify the top 5 most expensive products (by unit price) and their categories.
 8. Which product category has the fastest turnover based on stock quantity and lead time?
-   To calculate it i used group by in power query and count avg lead_time_days and stock quantity for each category and then used the custom formula to calculate trunover - [Stock_Quantity]/[AVG_Lead_Time_Days]
+
 
 
 Warehouse & Geographic Insights
