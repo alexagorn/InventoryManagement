@@ -1,5 +1,6 @@
 # InventoryManagement
 FP20 Analytics ZoomCharts Challenge
+Link: https://zoomcharts.com/en/microsoft-power-bi-custom-visuals/challenges/fp20-analytics-april-2025
 
 # Project
 
